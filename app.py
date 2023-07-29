@@ -33,7 +33,7 @@ uploaded_file = st.file_uploader('Importar arquivo XLSX', type=['xlsx'], label_v
 query_text = st.text_input('Escreva a sua pergunta:', placeholder='Escreva a pergunta aqui ...', disabled=not uploaded_file)
 
 # Fix the OpenAI API key
-openai_api_key = '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'
+openai_api_key = 'YOUR OPENAI API KEY'
 
 # App logic
 if openai_api_key.startswith('sk-') and uploaded_file is not None:
