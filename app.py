@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import openai
 from langchain.chat_models import ChatOpenAI
 from langchain.agents import create_pandas_dataframe_agent
 from langchain.agents.agent_types import AgentType
@@ -35,7 +36,7 @@ query_text = st.text_input('Escreva a sua pergunta:', placeholder='Escreva a per
 openai_api_key = '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'
 
 # App logic
-
 if openai_api_key.startswith('sk-') and uploaded_file is not None:
     st.header('Respostas')
     generate_response(uploaded_file, query_text, openai_api_key)
+
